@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.INSUFFICIENT_STORAGE)
 
-public class EmployeeExceptions  extends RuntimeException {
+public class EmployeeExceptions extends RuntimeException {
     private static final String DEFAULT_MESSAGE = "Employee book is full";
+
     public EmployeeExceptions() {
         this(DEFAULT_MESSAGE);
     }
+
     public EmployeeExceptions(String messenge) {
         super(messenge);
     }
